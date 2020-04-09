@@ -1,0 +1,25 @@
+
+QLineEdit#input {
+	font:  10px "Trebuchet MS", Sans-Serif;
+	border-width: 0px;
+	background-color: rgba(0,244,120,0%);
+	border-style: solid;
+	color: white;
+}
+QLineEdit#output {
+	font:  10px "Trebuchet MS", Sans-Serif;
+	border-width: 0px;
+	background-color: rgba(0,244,120,0%);
+	border-style: solid;
+	color: white;
+	font-weight: bold;
+}
+QListWidget#alternatives {
+	font:  12px "Trebuchet MS", Sans-Serif;
+	background-color: white;
+	alternate-background-color: white; 
+	color: black;
+	border-style: solid;
+	font-weight: bold;
+	border-width: 2px;
+}
