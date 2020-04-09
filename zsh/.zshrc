@@ -1,74 +1,87 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# 将本文件放于$HOMRE目录下
+#
+# Path
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/zchubin/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="miloshadzic"
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
+# 精确输入,是否区分大小写
 # CASE_SENSITIVE="true"
 
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+# 模糊输入,开启需关闭精确输入
+HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+# 禁用更新(原:一周一次)
+DISABLE_AUTO_UPDATE="true"
 
-# Uncomment the following line to automatically update without prompting.
+# 不提示自动更新
 # DISABLE_UPDATE_PROMPT="true"
 
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# 更新间隔(天)
+export UPDATE_ZSH_DAYS=15
 
-# Uncomment the following line if pasting URLs and other text is messed up.
+# 如果黏贴网址或文本混乱请取消以下行注释
 # DISABLE_MAGIC_FUNCTIONS=true
 
-# Uncomment the following line to disable colors in ls.
+# 取消注释,禁用ls中的眼色
 # DISABLE_LS_COLORS="true"
 
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+# 禁用终端自动设置的标题
+DISABLE_AUTO_TITLE="true"
 
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+# 命令自动更正
+ENABLE_CORRECTION="true"
 
-# Uncomment the following line to display red dots whilst waiting for completion.
+# 等待完成时显示红点
 # COMPLETION_WAITING_DOTS="true"
 
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
+# 未跟踪的文件禁用标记(提升大文件仓库状态检查的速度)
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
+# 更改命令执行时间
+# 在历史命令中显示时间戳
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
+# 插件目录 ~/.oh-my-zsh/plugins/*
+# 自定义插件目录 ~/.oh-my-zsh/custom/plugins/
 plugins=(git)
+
+# Antigen--插件管理器
+# Antigen: https://github.com/zsh-users/antigen
+# ANTIGEN="$HOME/.local/bin/antigen.zsh"
+
+# Install antigen.zsh if not exist
+# if [ ! -f "$ANTIGEN" ]; then
+#   echo "Installing antigen ... please connect the proxy"
+#   #export all_proxy=socks5://127.0.0.1:1086
+#   [ ! -d "$HOME/.local" ] && mkdir -p "$HOME/.local" 2> /dev/null
+#   [ ! -d "$HOME/.local/bin" ] && mkdir -p "$HOME/.local/bin" 2> /dev/null
+#   [ ! -f "$HOME/.z" ] && touch "$HOME/.z"
+#   URL="http://git.io/antigen"
+#   TMPFILE="/tmp/antigen.zsh"
+#   if [ -x "$(which curl)" ]; then
+#     curl -L "$URL" -o "$TMPFILE"
+#   elif [ -x "$(which wget)" ]; then
+#     wget "$URL" -O "$TMPFILE"
+#   else
+#     echo "ERROR: please install curl or wget before installation !!"
+#     exit
+#   fi
+#   if [ ! $? -eq 0 ]; then
+#     echo ""
+#     echo "ERROR: downloading antigen.zsh ($URL) failed !!"
+#     exit
+#   fi;
+#   echo "move $TMPFILE to $ANTIGEN"
+#   mv "$TMPFILE" "$ANTIGEN"
+# fi
 
 source $ZSH/oh-my-zsh.sh
 
@@ -76,24 +89,22 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# You may need to manually set your language environment
 # export LANG=en_US.UTF-8
+export LANG=zh_CN.UTF-8
+# export TERM="xterm-256color"
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+# 本地和远程会话的首选编辑器
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='nvim'
+else
+  export EDITOR='vim'
+fi
 
-# Compilation flags
+# Compilation flags(编译标志)
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias zshconfig="nvim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias S="neofetch"
+# alias S="screenfetch"

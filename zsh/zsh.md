@@ -13,7 +13,8 @@ neofetch
 screenfetch
 ```
 
-## [Oh My Zsh](https://ohmyz.sh)
+## 安装[Oh My Zsh](https://ohmyz.sh)
 ```shell
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+$1: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+$2: sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 ```
