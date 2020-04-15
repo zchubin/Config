@@ -1,14 +1,35 @@
-# ArchLinux推荐字体
+# ArchLinux 字体和输入法
 
-## Achlinx字体目录`/usr/share/fonts/`
+## Archlinx字体目录`/usr/share/fonts/`
 ```shell
-pacman -Ss font/ttf #查询源中字体/仅ttf字体
-fc-cache -vf #更新字体缓存
-fc-list #列出已安装字体
+# 查询源中字体/仅ttf字体
+pacman -Ss font/ttf
+
+# 更新字体缓存
+fc-cache -vf
+# 列出已安装字体
+fc-list
+# 已安装的中文字体
+fc-list:lang=zh
+
+# 推荐中文字体
+sudo pacman -S wqy-microhei wqy-zenhei tf-dejavu
 ```
 
-## 中文
+## Fcitx(输入法)
+```shell
+# 安装
+pacman -S fcitx-im fcitx fcitx-configtool kcm-fcitx fcitx-qt5 fcitx-gtk2\fcitx-gtk3
 
+# 配置
+nvim ~/.xprofile
+
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+```
+
+## 中文字体
 * [更纱黑体](https://userstyles.org/styles/176879/sarasa-gothic)
 
 1. 文泉驿
