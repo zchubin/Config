@@ -14,6 +14,8 @@ fc-list:lang=zh
 
 # 推荐中文字体
 sudo pacman -S wqy-microhei wqy-zenhei tf-dejavu
+# aur中的字体
+yay -S ttf-dejavu ttf-font-awesome ttf-arphic-ukai adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts ttf-arphic-uming wqy-bitmapfont wqy-microhei-lite wqy-zenhei wqy-microhei ttf-twemoji-color noto-fonts-emoji ttf-liberation noto-fonts-cjk
 ```
 
 ## Fcitx(输入法)
