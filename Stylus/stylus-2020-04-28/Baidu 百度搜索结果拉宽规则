@@ -30,7 +30,7 @@ div#container {
 div#content_left > :nth-child(2n+1) {
     /*background-color: #EAEBEC!important;*/
     padding: 8px 10px!important;
-    margin: 0px!important;
+    margin: 4px!important;
     border-bottom: solid 2px #ccc;
     /*-webkit-border-radius:5px;*/
 }
@@ -38,7 +38,7 @@ div#content_left > :nth-child(2n+1) {
 div#content_left > :nth-child(2n+2) {
     /*background-color: #F5F7FA!important;*/
     padding: 8px 10px!important;
-    margin: 0px!important;
+    margin: 4px!important;
     border-bottom: solid 2px #ccc;
     /*-webkit-border-radius:5px;*/
 }
@@ -108,7 +108,6 @@ div.rrecom-container {
     width: 400px!Important;
 }
 /* ===== 百度网页搜索结果拉宽 第四版 End=====*/
-
 #content_left .result-op .c-border,
 #content_left .result-op .op_dict3_extra {
     border-color: rgba(137, 137, 137, .1)!important
@@ -117,4 +116,47 @@ div.rrecom-container {
     background: none!important;
     border-top: 1px solid rgba(255, 255, 255, .1);
     border-bottom: 1px solid rgba(255, 255, 255, .1)
+}
+/*========= 居中显示 (Code by creampie) =========*/ 
+.container_l,
+.op-img-star-divide-low > a {
+    width: auto !important;
+}
+
+.s_tab,
+.nums,
+.search_tool_conter,
+#rs {
+    margin: 0 auto !important;
+}
+
+#page,
+#s_tab {
+    padding-left: 0px !important;
+    text-align: center !important;
+}
+
+body[link='#0000cc'] .s_form {
+    width: 760px !important;
+    margin: 0 auto !important;
+    transform: translatex(-40px);
+}
+
+#content_left {
+    width: 640px;
+    margin: 0 auto;
+    padding-left: 35px;
+    padding-top: 5px;
+    float: none;
+}
+
+.c-container {
+    width: 548px;
+}
+
+.hint_common_restop {
+    font-size: x-large;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    width: 599px;
 }
